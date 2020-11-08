@@ -1,0 +1,11 @@
+*.qws
+*.qsf
+*.inc
+*.bak
+*.ipinfo
+*.pl
+*.rpt
+db
+simulation
+output_files
+incremental_db
