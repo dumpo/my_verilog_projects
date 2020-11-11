@@ -2,24 +2,23 @@
 UART TX moudle
 by linhuifu 2020.20.11
 **********************************************/
-
-module uart_tx_byte
+//`default_nettype none
+module uart_byte_tx
 	(
 	input clk,
 	input rst_n,
-	input [7:0]data
-	input [2:0] baud_set,
+	input [7:0]data,
+	input [2:0]baud_set,
 	input send_en,
-	output reg t_data,
-	output reg tx_done,
-	output reg uart_state
+	output  t_data,
+	output  tx_done,
+	output  uart_state
 	);
 	
-	reg bps_clk;	//波特率时钟
-	reg [15:0]bps_DR;//分频计数最大值
-	reg [3:0] bps_cnt_q;
-	reg [7:0] r_data;
-	
+	wire bps_clk;	//波特率时钟
+	wire [15:0]bps_DR;//分频计数最大值
+	wire [3:0] bps_cnt_q;
+	wire [7:0] r_data;
 	
 	
 	DR_LUT d1
@@ -34,7 +33,7 @@ module uart_tx_byte
 	(
 	.clk(clk),
 	.rst_n(rst_n),
-	.en_cnt(send_en),
+	.en_cnt(uart_state),
 	.bps_DR(bps_DR),
 	.bps_clk(bps_clk)
 	);
@@ -43,7 +42,7 @@ module uart_tx_byte
 	(
 	.clk(clk),
 	.rst_n(rst_n),
-	.en_cnt(send_en),
+	 .send_en(send_en),
 	.bps_clk(bps_clk),
 	.bps_cnt_q(bps_cnt_q),
 	.tx_done(tx_done),
@@ -79,7 +78,7 @@ module DR_LUT
     input clk,
     input rst_n,
     input [2:0]baud_set,
-    output [15:0] bps_DR
+    output reg[15:0] bps_DR
     );
 
     localparam system_clk_period=20;
@@ -88,7 +87,7 @@ module DR_LUT
     localparam [15:0] bps_DR_38400=26041/system_clk_period-1;
     localparam [15:0] bps_DR_57600=17361/system_clk_period-1;
     localparam [15:0] bps_DR_115200=8680/system_clk_period-1;
-    reg [15:0] bps_DR;
+
 
     always@(posedge clk or negedge rst_n) begin
         if(~rst_n) bps_DR<=bps_DR_9600;
@@ -114,25 +113,27 @@ module div_cnt
     input rst_n,
     output reg bps_clk
     );
-    reg [15:0] d_cnt；
+   reg [15:0]  d_cnt;
     always @(posedge clk or negedge rst_n) begin
         if(!rst_n) begin
-            d_cnt<=0；
+           d_cnt<=0;
             bps_clk<=0;
         end
         else if(en_cnt) begin
-            if(d_cnt==bps_DR) 
+            if(d_cnt==bps_DR) begin 
                 d_cnt<=0;
-                bps_clk<=1
-            else 
+                bps_clk<=1;
+			end
+            else begin
                 d_cnt<=d_cnt+1;
-                bps_clk<=0；
+                bps_clk<=0;
+			end
         end
-        else 
+        else begin 
             d_cnt<=0;
-            bps_clk<=0；
+	    bps_clk<=0;
+		end
     end
-
 endmodule
 
 module bps_cnt
@@ -141,33 +142,47 @@ module bps_cnt
     input bps_clk,
     input rst_n,
     input send_en,
-    output [3:0] bps_cnt_q,
-    output tx_done,
-    output uart_state
+    output reg [3:0] bps_cnt_q,
+    output  reg tx_done,
+    output  reg uart_state
     );
-     
+    
+	//assign uart_state = rst_n&send_en;
+	//assign tx_done = (bps_cnt_q==11);
+	
     always @(posedge clk or negedge rst_n) begin
         if(!rst_n) begin
-            bps_cnt_q<=0；
-            tx_done<=0；
-            uart_state<=0;
+           bps_cnt_q<=0;
         end
-
-        else if(send_en)
-            uart_state<=1;
-
         else if(bps_cnt_q==11) begin
             bps_cnt_q<=0;
-            tx_done<=1;
-            uart_state<=0;
-        end
 
+        end
         else if(bps_clk)
             bps_cnt_q<=bps_cnt_q+1;
-        
         else
-            tx_done<=0；
+			bps_cnt_q<=bps_cnt_q;
     end
+	 
+	 
+	 always @(posedge clk or negedge rst_n) begin
+		if(!rst_n) 
+			uart_state<=0;
+		else if(send_en)
+			uart_state<=1;
+		else 
+			uart_state<=uart_state;
+	 end
+	 
+	 always @(posedge clk or negedge rst_n) begin
+		if(!rst_n) 
+			tx_done<=0;
+		else if(bps_cnt_q==11)
+			tx_done<=1;
+		else 
+			tx_done<=0;
+	 end
+			
 endmodule
 
 //根据bps_cnt计数选择发送数据的位
@@ -178,12 +193,13 @@ module rs232_tx
     input rst_n,
     input [7:0] r_data,
     input [3:0] bps_cnt_q,
-    output t_data
+    output reg t_data
 );
     localparam START_BIT=1'b0;
     localparam STOP_BIT=1'b0;
+   always@(posedge clk or negedge rst_n) begin
     if(!rst_n)
-        t_data<=1;
+        t_data<=1'b1;
     else begin
         case(bps_cnt_q)
         0:t_data<=1;
@@ -197,9 +213,10 @@ module rs232_tx
         8:t_data<=r_data[6];
         9:t_data<=r_data[7];
         10:t_data<=STOP_BIT;
-        default:r_data<=1;
+        default:t_data<=1;
+	endcase
     end
-
+   end
 endmodule
 //发送时对数据寄存
 module data_reg
@@ -210,10 +227,12 @@ module data_reg
     input rst_n,
     output reg[7:0]  r_data
 );
+   always@(posedge clk or negedge rst_n) begin
     if(!rst_n)
         r_data<=0;
     else if(send_en)
         r_data<=data;
     else
         r_data<=r_data;
+    end
 endmodule
