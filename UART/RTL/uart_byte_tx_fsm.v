@@ -1,6 +1,7 @@
 /**********************************************
 UART TX moudle
-by linhuifu 2020.20.11
+use fsm
+by linhuifu 2020.10.20
 **********************************************/
 //`default_nettype none
 module uart_byte_tx
@@ -81,7 +82,7 @@ module DR_LUT
     output reg[15:0] bps_DR
     );
 
-    localparam system_clk_period=20;//单位ns
+    localparam system_clk_period=20;
     localparam [15:0] bps_DR_9600=104167/system_clk_period-1;
     localparam [15:0] bps_DR_19200=52083/system_clk_period-1;
     localparam [15:0] bps_DR_38400=26041/system_clk_period-1;
