@@ -9,3 +9,29 @@ db
 simulation
 output_files
 incremental_db
+
+#忽略所有
+pipelined_fft_64
+fir_filter
+I2C
+# #添加
+# !.gitignore
+# #uart
+# !UART
+# !UART/RTL/*
+# !UART/DOC/*
+# !UART/BENCH/*
+# !UART/RTL
+# !UART/DOC
+# !UART/BENCH
+# !UART/*.qdf
+# !UART/*.do
+# !UART/*.bat
+# #I2C
+# !I2C
+# !I2C/RTL
+# !I2C/DOC
+# !I2C/BENCH
+# !I2C/*.qdf
+# !I2C/*.do
+# !I2C/*.bat
