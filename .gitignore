@@ -10,10 +10,12 @@ simulation
 output_files
 incremental_db
 
-#忽略所有
+*.zip
+eth
 pipelined_fft_64
 fir_filter
 I2C
+
 # #添加
 # !.gitignore
 # #uart
