@@ -10,7 +10,7 @@ simulation
 output_files
 incremental_db
 
-*.zip
+*.rar
 eth
 pipelined_fft_64
 fir_filter
