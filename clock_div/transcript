@@ -1,0 +1,839 @@
+# Reading pref.tcl
+# //  Questa Sim-64
+# //  Version 2020.1 win64 Jan 28 2020
+# //
+# //  Copyright 1991-2020 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  QuestaSim and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+do complie.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# QuestaSim-64 vlog 2020.1 Compiler 2020.01 Jan 28 2020
+# Start time: 13:27:06 on Mar 12,2021
+# vlog -reportprogress 300 clock_div.v 
+# -- Compiling module clock_div1
+# -- Compiling module clock_div2
+# 
+# Top level modules:
+# 	clock_div1
+# 	clock_div2
+# End time: 13:27:06 on Mar 12,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2020.1 Compiler 2020.01 Jan 28 2020
+# Start time: 13:27:06 on Mar 12,2021
+# vlog -reportprogress 300 clock_div_tb.v 
+# -- Compiling module DUT
+# 
+# Top level modules:
+# 	DUT
+# End time: 13:27:06 on Mar 12,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+do sim.do
+# vsim -voptargs="+acc" work.DUT 
+# Start time: 13:27:21 on Mar 12,2021
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Warning: (vopt-2009) At least one design unit was compiled with optimization level -O0 or -O1.
+# Use vdir -l command to find such design units.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading work.DUT(fast)
+# Loading work.clock_div1(fast)
+# Loading work.clock_div2(fast)
+# ** Note: $finish    : clock_div_tb.v(20)
+#    Time: 1005 ns  Iteration: 0  Instance: /DUT
+# 1
+# Break in Module DUT at clock_div_tb.v line 20
+
+
+do complie.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# QuestaSim-64 vlog 2020.1 Compiler 2020.01 Jan 28 2020
+# Start time: 13:29:47 on Mar 12,2021
+# vlog -reportprogress 300 clock_div.v 
+# -- Compiling module clock_div1
+# -- Compiling module clock_div2
+# 
+# Top level modules:
+# 	clock_div1
+# 	clock_div2
+# End time: 13:29:47 on Mar 12,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2020.1 Compiler 2020.01 Jan 28 2020
+# Start time: 13:29:47 on Mar 12,2021
+# vlog -reportprogress 300 clock_div_tb.v 
+# -- Compiling module DUT
+# 
+# Top level modules:
+# 	DUT
+# End time: 13:29:47 on Mar 12,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+do sim.do
+# End time: 13:30:02 on Mar 12,2021, Elapsed time: 0:02:41
+# Errors: 0, Warnings: 1
+# vsim -voptargs="+acc" work.DUT 
+# Start time: 13:30:02 on Mar 12,2021
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: (vopt-2009) At least one design unit was compiled with optimization level -O0 or -O1.
+# Use vdir -l command to find such design units.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading work.DUT(fast)
+# Loading work.clock_div1(fast)
+# Loading work.clock_div2(fast)
+# ** Note: $finish    : clock_div_tb.v(20)
+#    Time: 1005 ns  Iteration: 0  Instance: /DUT
+# 1
+# Break in Module DUT at clock_div_tb.v line 20
+view -new wave
+# .main_pane.wave1.interior.cs.body.pw.wf
+add wave -position insertpoint  \
+sim:/DUT/div1/clk_div \
+sim:/DUT/div1/clk_n \
+sim:/DUT/div1/clk_p
+do complie.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# QuestaSim-64 vlog 2020.1 Compiler 2020.01 Jan 28 2020
+# Start time: 13:33:54 on Mar 12,2021
+# vlog -reportprogress 300 clock_div.v 
+# -- Compiling module clock_div1
+# ** Error: clock_div.v(20): (vlog-2110) Illegal reference to net "clk_div".
+# ** Error: clock_div.v(39): (vlog-2110) Illegal reference to net "clk_div".
+# -- Compiling module clock_div2
+# End time: 13:33:54 on Mar 12,2021, Elapsed time: 0:00:00
+# Errors: 2, Warnings: 0
+# ** Error: D:/questasim64_2020.1/win64/vlog failed.
+# Error in macro ./complie.do line 3
+# D:/questasim64_2020.1/win64/vlog failed.
+#     while executing
+# "vlog  clock_div.v"
+do complie.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# QuestaSim-64 vlog 2020.1 Compiler 2020.01 Jan 28 2020
+# Start time: 13:34:48 on Mar 12,2021
+# vlog -reportprogress 300 clock_div.v 
+# -- Compiling module clock_div1
+# -- Compiling module clock_div2
+# 
+# Top level modules:
+# 	clock_div1
+# 	clock_div2
+# End time: 13:34:48 on Mar 12,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2020.1 Compiler 2020.01 Jan 28 2020
+# Start time: 13:34:48 on Mar 12,2021
+# vlog -reportprogress 300 clock_div_tb.v 
+# -- Compiling module DUT
+# 
+# Top level modules:
+# 	DUT
+# End time: 13:34:48 on Mar 12,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+do sim.do
+# End time: 13:34:59 on Mar 12,2021, Elapsed time: 0:04:57
+# Errors: 1, Warnings: 1
+# vsim -voptargs="+acc" work.DUT 
+# Start time: 13:34:59 on Mar 12,2021
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: (vopt-2009) At least one design unit was compiled with optimization level -O0 or -O1.
+# Use vdir -l command to find such design units.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading work.DUT(fast)
+# Loading work.clock_div1(fast)
+# Loading work.clock_div2(fast)
+# ** Note: $finish    : clock_div_tb.v(20)
+#    Time: 1015 ns  Iteration: 0  Instance: /DUT
+# 1
+# Break in Module DUT at clock_div_tb.v line 20
+add wave -position insertpoint  \
+sim:/DUT/div1/clk_n \
+sim:/DUT/div1/clk_p \
+sim:/DUT/div1/cnt1 \
+sim:/DUT/div1/cnt2
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-8009) Loading existing optimized design _opt2
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading work.DUT(fast)
+# Loading work.clock_div1(fast)
+# Loading work.clock_div2(fast)
+run -all
+# ** Note: $finish    : clock_div_tb.v(20)
+#    Time: 1015 ns  Iteration: 0  Instance: /DUT
+# 1
+# Break in Module DUT at clock_div_tb.v line 20
+add wave -position insertpoint  \
+sim:/DUT/div1/clk_div
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-8009) Loading existing optimized design _opt2
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading work.DUT(fast)
+# Loading work.clock_div1(fast)
+# Loading work.clock_div2(fast)
+run -all
+# ** Note: $finish    : clock_div_tb.v(20)
+#    Time: 1015 ns  Iteration: 0  Instance: /DUT
+# 1
+# Break in Module DUT at clock_div_tb.v line 20
+do complie.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# QuestaSim-64 vlog 2020.1 Compiler 2020.01 Jan 28 2020
+# Start time: 13:44:37 on Mar 12,2021
+# vlog -reportprogress 300 clock_div.v 
+# -- Compiling module clock_div1
+# -- Compiling module clock_div2
+# 
+# Top level modules:
+# 	clock_div1
+# 	clock_div2
+# End time: 13:44:37 on Mar 12,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2020.1 Compiler 2020.01 Jan 28 2020
+# Start time: 13:44:37 on Mar 12,2021
+# vlog -reportprogress 300 clock_div_tb.v 
+# -- Compiling module DUT
+# ** Error: clock_div_tb.v(12): (vlog-2110) Illegal reference to net "clk_out1".
+# ** Error: clock_div_tb.v(13): (vlog-2110) Illegal reference to net "clk_out2".
+# End time: 13:44:37 on Mar 12,2021, Elapsed time: 0:00:00
+# Errors: 2, Warnings: 0
+# ** Error: D:/questasim64_2020.1/win64/vlog failed.
+# Error in macro ./complie.do line 4
+# D:/questasim64_2020.1/win64/vlog failed.
+#     while executing
+# "vlog  clock_div_tb.v"
+do complie.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# QuestaSim-64 vlog 2020.1 Compiler 2020.01 Jan 28 2020
+# Start time: 13:45:04 on Mar 12,2021
+# vlog -reportprogress 300 clock_div.v 
+# -- Compiling module clock_div1
+# -- Compiling module clock_div2
+# 
+# Top level modules:
+# 	clock_div1
+# 	clock_div2
+# End time: 13:45:04 on Mar 12,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2020.1 Compiler 2020.01 Jan 28 2020
+# Start time: 13:45:04 on Mar 12,2021
+# vlog -reportprogress 300 clock_div_tb.v 
+# -- Compiling module DUT
+# 
+# Top level modules:
+# 	DUT
+# End time: 13:45:04 on Mar 12,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+do sim.do
+# End time: 13:45:14 on Mar 12,2021, Elapsed time: 0:10:15
+# Errors: 1, Warnings: 1
+# vsim -voptargs="+acc" work.DUT 
+# Start time: 13:45:14 on Mar 12,2021
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: (vopt-2009) At least one design unit was compiled with optimization level -O0 or -O1.
+# Use vdir -l command to find such design units.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading work.DUT(fast)
+# Loading work.clock_div1(fast)
+# Loading work.clock_div2(fast)
+# ** Note: $finish    : clock_div_tb.v(14)
+#    Time: 1015 ns  Iteration: 0  Instance: /DUT
+# 1
+# Break in Module DUT at clock_div_tb.v line 14
+add wave -position insertpoint  \
+sim:/DUT/clk_out1 \
+sim:/DUT/clk_out2 \
+sim:/DUT/rst \
+sim:/DUT/clk
+do sim.do
+# End time: 13:46:24 on Mar 12,2021, Elapsed time: 0:01:10
+# Errors: 0, Warnings: 1
+# vsim -voptargs="+acc" work.DUT 
+# Start time: 13:46:24 on Mar 12,2021
+# ** Note: (vsim-8009) Loading existing optimized design _opt2
+# Loading work.DUT(fast)
+# Loading work.clock_div1(fast)
+# Loading work.clock_div2(fast)
+# ** Note: $finish    : clock_div_tb.v(14)
+#    Time: 1015 ns  Iteration: 0  Instance: /DUT
+# 1
+# Break in Module DUT at clock_div_tb.v line 14
+do complie.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# QuestaSim-64 vlog 2020.1 Compiler 2020.01 Jan 28 2020
+# Start time: 13:49:16 on Mar 12,2021
+# vlog -reportprogress 300 clock_div.v 
+# -- Compiling module clock_div1
+# -- Compiling module clock_div2
+# 
+# Top level modules:
+# 	clock_div1
+# 	clock_div2
+# End time: 13:49:16 on Mar 12,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2020.1 Compiler 2020.01 Jan 28 2020
+# Start time: 13:49:17 on Mar 12,2021
+# vlog -reportprogress 300 clock_div_tb.v 
+# -- Compiling module DUT
+# 
+# Top level modules:
+# 	DUT
+# End time: 13:49:17 on Mar 12,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+do sim.do
+# End time: 13:49:22 on Mar 12,2021, Elapsed time: 0:02:58
+# Errors: 0, Warnings: 0
+# vsim -voptargs="+acc" work.DUT 
+# Start time: 13:49:22 on Mar 12,2021
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: (vopt-2009) At least one design unit was compiled with optimization level -O0 or -O1.
+# Use vdir -l command to find such design units.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading work.DUT(fast)
+# Loading work.clock_div1(fast)
+# Loading work.clock_div2(fast)
+# ** Note: $finish    : clock_div_tb.v(14)
+#    Time: 1015 ns  Iteration: 0  Instance: /DUT
+# 1
+# Break in Module DUT at clock_div_tb.v line 14
+do complie.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# QuestaSim-64 vlog 2020.1 Compiler 2020.01 Jan 28 2020
+# Start time: 13:54:43 on Mar 12,2021
+# vlog -reportprogress 300 clock_div.v 
+# -- Compiling module clock_div1
+# -- Compiling module clock_div2
+# 
+# Top level modules:
+# 	clock_div1
+# 	clock_div2
+# End time: 13:54:43 on Mar 12,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2020.1 Compiler 2020.01 Jan 28 2020
+# Start time: 13:54:43 on Mar 12,2021
+# vlog -reportprogress 300 clock_div_tb.v 
+# -- Compiling module DUT
+# 
+# Top level modules:
+# 	DUT
+# End time: 13:54:43 on Mar 12,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+do sim.do
+# End time: 13:54:47 on Mar 12,2021, Elapsed time: 0:05:25
+# Errors: 0, Warnings: 1
+# vsim -voptargs="+acc" work.DUT 
+# Start time: 13:54:48 on Mar 12,2021
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: (vopt-2009) At least one design unit was compiled with optimization level -O0 or -O1.
+# Use vdir -l command to find such design units.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading work.DUT(fast)
+# Loading work.clock_div1(fast)
+# Loading work.clock_div2(fast)
+# ** Note: $finish    : clock_div_tb.v(14)
+#    Time: 1015 ns  Iteration: 0  Instance: /DUT
+# 1
+# Break in Module DUT at clock_div_tb.v line 14
+do complie.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# QuestaSim-64 vlog 2020.1 Compiler 2020.01 Jan 28 2020
+# Start time: 13:57:15 on Mar 12,2021
+# vlog -reportprogress 300 clock_div.v 
+# -- Compiling module clock_div1
+# -- Compiling module clock_div2
+# 
+# Top level modules:
+# 	clock_div1
+# 	clock_div2
+# End time: 13:57:15 on Mar 12,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2020.1 Compiler 2020.01 Jan 28 2020
+# Start time: 13:57:15 on Mar 12,2021
+# vlog -reportprogress 300 clock_div_tb.v 
+# -- Compiling module DUT
+# 
+# Top level modules:
+# 	DUT
+# End time: 13:57:15 on Mar 12,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+do sim.do
+# End time: 13:57:21 on Mar 12,2021, Elapsed time: 0:02:33
+# Errors: 0, Warnings: 1
+# vsim -voptargs="+acc" work.DUT 
+# Start time: 13:57:21 on Mar 12,2021
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: (vopt-2009) At least one design unit was compiled with optimization level -O0 or -O1.
+# Use vdir -l command to find such design units.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading work.DUT(fast)
+# Loading work.clock_div1(fast)
+# Loading work.clock_div2(fast)
+# ** Note: $finish    : clock_div_tb.v(14)
+#    Time: 1015 ns  Iteration: 0  Instance: /DUT
+# 1
+# Break in Module DUT at clock_div_tb.v line 14
+do complie.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# QuestaSim-64 vlog 2020.1 Compiler 2020.01 Jan 28 2020
+# Start time: 13:59:04 on Mar 12,2021
+# vlog -reportprogress 300 clock_div.v 
+# -- Compiling module clock_div1
+# -- Compiling module clock_div2
+# 
+# Top level modules:
+# 	clock_div1
+# 	clock_div2
+# End time: 13:59:04 on Mar 12,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2020.1 Compiler 2020.01 Jan 28 2020
+# Start time: 13:59:04 on Mar 12,2021
+# vlog -reportprogress 300 clock_div_tb.v 
+# -- Compiling module DUT
+# 
+# Top level modules:
+# 	DUT
+# End time: 13:59:04 on Mar 12,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+do sim.do
+# End time: 13:59:08 on Mar 12,2021, Elapsed time: 0:01:47
+# Errors: 0, Warnings: 1
+# vsim -voptargs="+acc" work.DUT 
+# Start time: 13:59:08 on Mar 12,2021
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: (vopt-2009) At least one design unit was compiled with optimization level -O0 or -O1.
+# Use vdir -l command to find such design units.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading work.DUT(fast)
+# Loading work.clock_div1(fast)
+# Loading work.clock_div2(fast)
+# ** Note: $finish    : clock_div_tb.v(14)
+#    Time: 1015 ns  Iteration: 0  Instance: /DUT
+# 1
+# Break in Module DUT at clock_div_tb.v line 14
+do complie.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# QuestaSim-64 vlog 2020.1 Compiler 2020.01 Jan 28 2020
+# Start time: 14:05:03 on Mar 12,2021
+# vlog -reportprogress 300 clock_div.v 
+# -- Compiling module clock_div1
+# -- Compiling module clock_div2
+# 
+# Top level modules:
+# 	clock_div1
+# 	clock_div2
+# End time: 14:05:03 on Mar 12,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2020.1 Compiler 2020.01 Jan 28 2020
+# Start time: 14:05:03 on Mar 12,2021
+# vlog -reportprogress 300 clock_div_tb.v 
+# -- Compiling module DUT
+# 
+# Top level modules:
+# 	DUT
+# End time: 14:05:03 on Mar 12,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+do sim.do
+# End time: 14:05:07 on Mar 12,2021, Elapsed time: 0:05:59
+# Errors: 0, Warnings: 1
+# vsim -voptargs="+acc" work.DUT 
+# Start time: 14:05:07 on Mar 12,2021
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: (vopt-2009) At least one design unit was compiled with optimization level -O0 or -O1.
+# Use vdir -l command to find such design units.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading work.DUT(fast)
+# Loading work.clock_div1(fast)
+# Loading work.clock_div2(fast)
+# ** Note: $finish    : clock_div_tb.v(14)
+#    Time: 1015 ns  Iteration: 0  Instance: /DUT
+# 1
+# Break in Module DUT at clock_div_tb.v line 14
+do complie.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# QuestaSim-64 vlog 2020.1 Compiler 2020.01 Jan 28 2020
+# Start time: 14:07:26 on Mar 12,2021
+# vlog -reportprogress 300 clock_div.v 
+# -- Compiling module clock_div1
+# -- Compiling module clock_div2
+# 
+# Top level modules:
+# 	clock_div1
+# 	clock_div2
+# End time: 14:07:26 on Mar 12,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2020.1 Compiler 2020.01 Jan 28 2020
+# Start time: 14:07:27 on Mar 12,2021
+# vlog -reportprogress 300 clock_div_tb.v 
+# -- Compiling module DUT
+# 
+# Top level modules:
+# 	DUT
+# End time: 14:07:27 on Mar 12,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+do sim.do
+# End time: 14:07:31 on Mar 12,2021, Elapsed time: 0:02:24
+# Errors: 0, Warnings: 1
+# vsim -voptargs="+acc" work.DUT 
+# Start time: 14:07:31 on Mar 12,2021
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: (vopt-2009) At least one design unit was compiled with optimization level -O0 or -O1.
+# Use vdir -l command to find such design units.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading work.DUT(fast)
+# Loading work.clock_div1(fast)
+# Loading work.clock_div2(fast)
+# ** Note: $finish    : clock_div_tb.v(14)
+#    Time: 1015 ns  Iteration: 0  Instance: /DUT
+# 1
+# Break in Module DUT at clock_div_tb.v line 14
+do complie.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# QuestaSim-64 vlog 2020.1 Compiler 2020.01 Jan 28 2020
+# Start time: 14:09:37 on Mar 12,2021
+# vlog -reportprogress 300 clock_div.v 
+# -- Compiling module clock_div1
+# -- Compiling module clock_div2
+# 
+# Top level modules:
+# 	clock_div1
+# 	clock_div2
+# End time: 14:09:37 on Mar 12,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2020.1 Compiler 2020.01 Jan 28 2020
+# Start time: 14:09:37 on Mar 12,2021
+# vlog -reportprogress 300 clock_div_tb.v 
+# -- Compiling module DUT
+# 
+# Top level modules:
+# 	DUT
+# End time: 14:09:37 on Mar 12,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+do sim.do
+# End time: 14:09:42 on Mar 12,2021, Elapsed time: 0:02:11
+# Errors: 0, Warnings: 1
+# vsim -voptargs="+acc" work.DUT 
+# Start time: 14:09:43 on Mar 12,2021
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: (vopt-2009) At least one design unit was compiled with optimization level -O0 or -O1.
+# Use vdir -l command to find such design units.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading work.DUT(fast)
+# Loading work.clock_div1(fast)
+# Loading work.clock_div2(fast)
+# ** Note: $finish    : clock_div_tb.v(14)
+#    Time: 1015 ns  Iteration: 0  Instance: /DUT
+# 1
+# Break in Module DUT at clock_div_tb.v line 14
+do complie.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# QuestaSim-64 vlog 2020.1 Compiler 2020.01 Jan 28 2020
+# Start time: 14:10:41 on Mar 12,2021
+# vlog -reportprogress 300 clock_div.v 
+# -- Compiling module clock_div1
+# -- Compiling module clock_div2
+# 
+# Top level modules:
+# 	clock_div1
+# 	clock_div2
+# End time: 14:10:41 on Mar 12,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2020.1 Compiler 2020.01 Jan 28 2020
+# Start time: 14:10:41 on Mar 12,2021
+# vlog -reportprogress 300 clock_div_tb.v 
+# -- Compiling module DUT
+# 
+# Top level modules:
+# 	DUT
+# End time: 14:10:41 on Mar 12,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+do sim.do
+# End time: 14:10:45 on Mar 12,2021, Elapsed time: 0:01:02
+# Errors: 0, Warnings: 1
+# vsim -voptargs="+acc" work.DUT 
+# Start time: 14:10:45 on Mar 12,2021
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: (vopt-2009) At least one design unit was compiled with optimization level -O0 or -O1.
+# Use vdir -l command to find such design units.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading work.DUT(fast)
+# Loading work.clock_div1(fast)
+# Loading work.clock_div2(fast)
+# ** Note: $finish    : clock_div_tb.v(14)
+#    Time: 1015 ns  Iteration: 0  Instance: /DUT
+# 1
+# Break in Module DUT at clock_div_tb.v line 14
+do complie.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# QuestaSim-64 vlog 2020.1 Compiler 2020.01 Jan 28 2020
+# Start time: 14:11:27 on Mar 12,2021
+# vlog -reportprogress 300 clock_div.v 
+# -- Compiling module clock_div1
+# -- Compiling module clock_div2
+# 
+# Top level modules:
+# 	clock_div1
+# 	clock_div2
+# End time: 14:11:27 on Mar 12,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2020.1 Compiler 2020.01 Jan 28 2020
+# Start time: 14:11:27 on Mar 12,2021
+# vlog -reportprogress 300 clock_div_tb.v 
+# -- Compiling module DUT
+# 
+# Top level modules:
+# 	DUT
+# End time: 14:11:27 on Mar 12,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+do sim.do
+# End time: 14:11:33 on Mar 12,2021, Elapsed time: 0:00:48
+# Errors: 0, Warnings: 1
+# vsim -voptargs="+acc" work.DUT 
+# Start time: 14:11:33 on Mar 12,2021
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: (vopt-2009) At least one design unit was compiled with optimization level -O0 or -O1.
+# Use vdir -l command to find such design units.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading work.DUT(fast)
+# Loading work.clock_div1(fast)
+# Loading work.clock_div2(fast)
+# ** Note: $finish    : clock_div_tb.v(14)
+#    Time: 1015 ns  Iteration: 0  Instance: /DUT
+# 1
+# Break in Module DUT at clock_div_tb.v line 14
+do complie.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# QuestaSim-64 vlog 2020.1 Compiler 2020.01 Jan 28 2020
+# Start time: 14:15:33 on Mar 12,2021
+# vlog -reportprogress 300 clock_div.v 
+# -- Compiling module clock_div1
+# -- Compiling module clock_div2
+# 
+# Top level modules:
+# 	clock_div1
+# 	clock_div2
+# End time: 14:15:33 on Mar 12,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2020.1 Compiler 2020.01 Jan 28 2020
+# Start time: 14:15:33 on Mar 12,2021
+# vlog -reportprogress 300 clock_div_tb.v 
+# -- Compiling module DUT
+# 
+# Top level modules:
+# 	DUT
+# End time: 14:15:34 on Mar 12,2021, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+do sim.do
+# End time: 14:15:37 on Mar 12,2021, Elapsed time: 0:04:04
+# Errors: 0, Warnings: 1
+# vsim -voptargs="+acc" work.DUT 
+# Start time: 14:15:37 on Mar 12,2021
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: (vopt-2009) At least one design unit was compiled with optimization level -O0 or -O1.
+# Use vdir -l command to find such design units.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading work.DUT(fast)
+# Loading work.clock_div1(fast)
+# Loading work.clock_div2(fast)
+# ** Note: $finish    : clock_div_tb.v(14)
+#    Time: 1015 ns  Iteration: 0  Instance: /DUT
+# 1
+# Break in Module DUT at clock_div_tb.v line 14
+do complie.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# QuestaSim-64 vlog 2020.1 Compiler 2020.01 Jan 28 2020
+# Start time: 14:16:56 on Mar 12,2021
+# vlog -reportprogress 300 clock_div.v 
+# -- Compiling module clock_div1
+# -- Compiling module clock_div2
+# 
+# Top level modules:
+# 	clock_div1
+# 	clock_div2
+# End time: 14:16:56 on Mar 12,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2020.1 Compiler 2020.01 Jan 28 2020
+# Start time: 14:16:56 on Mar 12,2021
+# vlog -reportprogress 300 clock_div_tb.v 
+# -- Compiling module DUT
+# 
+# Top level modules:
+# 	DUT
+# End time: 14:16:56 on Mar 12,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+do sim.do
+# End time: 14:17:01 on Mar 12,2021, Elapsed time: 0:01:24
+# Errors: 0, Warnings: 1
+# vsim -voptargs="+acc" work.DUT 
+# Start time: 14:17:01 on Mar 12,2021
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: (vopt-2009) At least one design unit was compiled with optimization level -O0 or -O1.
+# Use vdir -l command to find such design units.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading work.DUT(fast)
+# Loading work.clock_div1(fast)
+# Loading work.clock_div2(fast)
+# ** Note: $finish    : clock_div_tb.v(14)
+#    Time: 1015 ns  Iteration: 0  Instance: /DUT
+# 1
+# Break in Module DUT at clock_div_tb.v line 14
+do complie.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# QuestaSim-64 vlog 2020.1 Compiler 2020.01 Jan 28 2020
+# Start time: 14:18:23 on Mar 12,2021
+# vlog -reportprogress 300 clock_div.v 
+# -- Compiling module clock_div1
+# -- Compiling module clock_div2
+# 
+# Top level modules:
+# 	clock_div1
+# 	clock_div2
+# End time: 14:18:23 on Mar 12,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2020.1 Compiler 2020.01 Jan 28 2020
+# Start time: 14:18:23 on Mar 12,2021
+# vlog -reportprogress 300 clock_div_tb.v 
+# -- Compiling module DUT
+# 
+# Top level modules:
+# 	DUT
+# End time: 14:18:24 on Mar 12,2021, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+do sim.do
+# End time: 14:18:27 on Mar 12,2021, Elapsed time: 0:01:26
+# Errors: 0, Warnings: 1
+# vsim -voptargs="+acc" work.DUT 
+# Start time: 14:18:27 on Mar 12,2021
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: (vopt-2009) At least one design unit was compiled with optimization level -O0 or -O1.
+# Use vdir -l command to find such design units.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading work.DUT(fast)
+# Loading work.clock_div1(fast)
+# Loading work.clock_div2(fast)
+# ** Note: $finish    : clock_div_tb.v(14)
+#    Time: 1015 ns  Iteration: 0  Instance: /DUT
+# 1
+# Break in Module DUT at clock_div_tb.v line 14
+do complie.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# QuestaSim-64 vlog 2020.1 Compiler 2020.01 Jan 28 2020
+# Start time: 14:19:53 on Mar 12,2021
+# vlog -reportprogress 300 clock_div.v 
+# -- Compiling module clock_div1
+# -- Compiling module clock_div2
+# 
+# Top level modules:
+# 	clock_div1
+# 	clock_div2
+# End time: 14:19:53 on Mar 12,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2020.1 Compiler 2020.01 Jan 28 2020
+# Start time: 14:19:53 on Mar 12,2021
+# vlog -reportprogress 300 clock_div_tb.v 
+# -- Compiling module DUT
+# 
+# Top level modules:
+# 	DUT
+# End time: 14:19:54 on Mar 12,2021, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+do sim.do
+# End time: 14:19:57 on Mar 12,2021, Elapsed time: 0:01:30
+# Errors: 0, Warnings: 1
+# vsim -voptargs="+acc" work.DUT 
+# Start time: 14:19:58 on Mar 12,2021
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: (vopt-2009) At least one design unit was compiled with optimization level -O0 or -O1.
+# Use vdir -l command to find such design units.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading work.DUT(fast)
+# Loading work.clock_div1(fast)
+# Loading work.clock_div2(fast)
+# ** Note: $finish    : clock_div_tb.v(14)
+#    Time: 1015 ns  Iteration: 0  Instance: /DUT
+# 1
+# Break in Module DUT at clock_div_tb.v line 14
+do complie.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# QuestaSim-64 vlog 2020.1 Compiler 2020.01 Jan 28 2020
+# Start time: 14:23:31 on Mar 12,2021
+# vlog -reportprogress 300 clock_div.v 
+# -- Compiling module clock_div1
+# -- Compiling module Odd_Divider
+# -- Compiling module clock_div2
+# 
+# Top level modules:
+# 	clock_div1
+# 	Odd_Divider
+# 	clock_div2
+# End time: 14:23:31 on Mar 12,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2020.1 Compiler 2020.01 Jan 28 2020
+# Start time: 14:23:31 on Mar 12,2021
+# vlog -reportprogress 300 clock_div_tb.v 
+# -- Compiling module DUT
+# 
+# Top level modules:
+# 	DUT
+# End time: 14:23:31 on Mar 12,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+do sim.do
+# End time: 14:23:37 on Mar 12,2021, Elapsed time: 0:03:39
+# Errors: 0, Warnings: 1
+# vsim -voptargs="+acc" work.DUT 
+# Start time: 14:23:37 on Mar 12,2021
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: (vopt-2009) At least one design unit was compiled with optimization level -O0 or -O1.
+# Use vdir -l command to find such design units.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading work.DUT(fast)
+# Loading work.Odd_Divider(fast)
+# Loading work.clock_div1(fast)
+# Loading work.clock_div2(fast)
+# ** Note: $finish    : clock_div_tb.v(14)
+#    Time: 1015 ns  Iteration: 0  Instance: /DUT
+# 1
+# Break in Module DUT at clock_div_tb.v line 14
+do complie.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# QuestaSim-64 vlog 2020.1 Compiler 2020.01 Jan 28 2020
+# Start time: 14:25:24 on Mar 12,2021
+# vlog -reportprogress 300 clock_div.v 
+# -- Compiling module clock_div1
+# -- Compiling module Odd_Divider
+# -- Compiling module clock_div2
+# 
+# Top level modules:
+# 	clock_div1
+# 	Odd_Divider
+# 	clock_div2
+# End time: 14:25:24 on Mar 12,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2020.1 Compiler 2020.01 Jan 28 2020
+# Start time: 14:25:24 on Mar 12,2021
+# vlog -reportprogress 300 clock_div_tb.v 
+# -- Compiling module DUT
+# 
+# Top level modules:
+# 	DUT
+# End time: 14:25:24 on Mar 12,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+do sim.do
+# End time: 14:25:30 on Mar 12,2021, Elapsed time: 0:01:53
+# Errors: 0, Warnings: 1
+# vsim -voptargs="+acc" work.DUT 
+# Start time: 14:25:30 on Mar 12,2021
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: (vopt-2009) At least one design unit was compiled with optimization level -O0 or -O1.
+# Use vdir -l command to find such design units.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading work.DUT(fast)
+# Loading work.Odd_Divider(fast)
+# Loading work.clock_div1(fast)
+# Loading work.clock_div2(fast)
+# ** Note: $stop    : clock_div_tb.v(14)
+#    Time: 1015 ns  Iteration: 0  Instance: /DUT
+# Break in Module DUT at clock_div_tb.v line 14
