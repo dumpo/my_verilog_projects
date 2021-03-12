@@ -30,7 +30,7 @@ module clock_delay_tb();
 	#40
 	rst=0;
 	#100000
-	$stop;
+	$finish;
 	end
 	
 

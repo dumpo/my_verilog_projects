@@ -5,6 +5,7 @@
 *.ipinfo
 *.pl
 *.rpt
+*.wlf
 db
 simulation
 output_files
