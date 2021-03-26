@@ -8,6 +8,4 @@ sim:/DUT/div1/clk_n \
 sim:/DUT/div1/clk_p \
 sim:/DUT/div1/cnt1 \
 sim:/DUT/div1/cnt2 
-
-
 run -all

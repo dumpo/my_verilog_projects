@@ -6,6 +6,7 @@
 *.pl
 *.rpt
 *.wlf
+work
 db
 simulation
 output_files

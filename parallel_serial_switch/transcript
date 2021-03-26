@@ -1,0 +1,141 @@
+# Reading pref.tcl
+# //  Questa Sim-64
+# //  Version 2020.1 win64 Jan 28 2020
+# //
+# //  Copyright 1991-2020 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  QuestaSim and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+do complie1.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# QuestaSim-64 vlog 2020.1 Compiler 2020.01 Jan 28 2020
+# Start time: 19:50:15 on Mar 26,2021
+# vlog -reportprogress 300 parallel_to_serial.v parallel_to_serial_tb.v serial_to_parallel _tb.v serial_to_parallel.v 
+# -- Compiling module parallel_to_serial
+# -- Compiling module DUT1
+# -- Compiling module serial_to_parallel
+# ** Error (suppressible): serial_to_parallel.v(12): (vlog-2388) 'data_in' already declared in this scope (serial_to_parallel) at serial_to_parallel.v(5).
+# ** Error: serial_to_parallel.v(18): (vlog-2730) Undefined variable: 'in_reg'.
+# ** Error: serial_to_parallel.v(19): (vlog-2730) Undefined variable: 'out'.
+# ** Error: (vlog-13069) serial_to_parallel.v(23): near "default": syntax error, unexpected default.
+# End time: 19:50:15 on Mar 26,2021, Elapsed time: 0:00:00
+# Errors: 4, Warnings: 0
+# ** Error: D:/questasim64_2020.1/win64/vlog failed.
+# Error in macro ./complie1.do line 3
+# D:/questasim64_2020.1/win64/vlog failed.
+#     while executing
+# "vlog  *.v"
+do complie1.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# QuestaSim-64 vlog 2020.1 Compiler 2020.01 Jan 28 2020
+# Start time: 20:16:15 on Mar 26,2021
+# vlog -reportprogress 300 parallel_to_serial.v parallel_to_serial_tb.v serial_to_parallel _tb.v serial_to_parallel.v 
+# -- Compiling module parallel_to_serial
+# -- Compiling module DUT1
+# ** Warning: serial_to_parallel _tb.v(2): (vlog-2275) Existing module 'DUT1' will be overwritten.
+# -- Compiling module DUT1
+# -- Compiling module serial_to_parallel
+# ** Error: (vlog-13069) serial_to_parallel.v(19): near "end": syntax error, unexpected end, expecting ';'.
+# End time: 20:16:15 on Mar 26,2021, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 1
+# ** Error: D:/questasim64_2020.1/win64/vlog failed.
+# Error in macro ./complie1.do line 3
+# D:/questasim64_2020.1/win64/vlog failed.
+#     while executing
+# "vlog  *.v"
+do complie1.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# QuestaSim-64 vlog 2020.1 Compiler 2020.01 Jan 28 2020
+# Start time: 20:16:32 on Mar 26,2021
+# vlog -reportprogress 300 parallel_to_serial.v parallel_to_serial_tb.v serial_to_parallel _tb.v serial_to_parallel.v 
+# -- Compiling module parallel_to_serial
+# -- Compiling module DUT1
+# ** Warning: serial_to_parallel _tb.v(2): (vlog-2275) Existing module 'DUT1' will be overwritten.
+# -- Compiling module DUT1
+# -- Compiling module serial_to_parallel
+# 
+# Top level modules:
+# 	DUT1
+# End time: 20:16:33 on Mar 26,2021, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 1
+# vsim -voptargs="+acc" work.DUT1 
+# Start time: 20:16:33 on Mar 26,2021
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading work.DUT1(fast)
+# Loading work.serial_to_parallel(fast)
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'u1'.  Expected 5, found 4.
+#    Time: 0 ps  Iteration: 0  Instance: /DUT1/u1 File: serial_to_parallel _tb.v Line: 40
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (8) for port 'data_in'. The port definition is at: serial_to_parallel.v(5).
+#    Time: 0 ps  Iteration: 0  Instance: /DUT1/u1 File: serial_to_parallel _tb.v Line: 40
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (1) for port 'data_out'. The port definition is at: serial_to_parallel.v(6).
+#    Time: 0 ps  Iteration: 0  Instance: /DUT1/u1 File: serial_to_parallel _tb.v Line: 40
+# ** Warning: (vsim-3722) serial_to_parallel _tb.v(40): [TFMPC] - Missing connection for port 'done'.
+# ** Note: $stop    : serial_to_parallel _tb.v(34)
+#    Time: 390 ns  Iteration: 0  Instance: /DUT1
+# Break in Module DUT1 at serial_to_parallel _tb.v line 34
+do complie1.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# QuestaSim-64 vlog 2020.1 Compiler 2020.01 Jan 28 2020
+# Start time: 20:17:49 on Mar 26,2021
+# vlog -reportprogress 300 serial_to_parallel _tb.v serial_to_parallel.v 
+# -- Compiling module DUT2
+# -- Compiling module serial_to_parallel
+# 
+# Top level modules:
+# 	DUT2
+# End time: 20:17:49 on Mar 26,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 20:17:54 on Mar 26,2021, Elapsed time: 0:01:21
+# Errors: 0, Warnings: 4
+# vsim -voptargs="+acc" work.DUT2 
+# Start time: 20:17:54 on Mar 26,2021
+# ** Note: (vsim-3812) Design is being optimized...
+# Loading work.DUT2(fast)
+# Loading work.serial_to_parallel(fast)
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'u2'.  Expected 5, found 4.
+#    Time: 0 ps  Iteration: 0  Instance: /DUT2/u2 File: serial_to_parallel _tb.v Line: 40
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (8) for port 'data_in'. The port definition is at: serial_to_parallel.v(5).
+#    Time: 0 ps  Iteration: 0  Instance: /DUT2/u2 File: serial_to_parallel _tb.v Line: 40
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (1) for port 'data_out'. The port definition is at: serial_to_parallel.v(6).
+#    Time: 0 ps  Iteration: 0  Instance: /DUT2/u2 File: serial_to_parallel _tb.v Line: 40
+# ** Warning: (vsim-3722) serial_to_parallel _tb.v(40): [TFMPC] - Missing connection for port 'done'.
+# ** Note: $stop    : serial_to_parallel _tb.v(34)
+#    Time: 390 ns  Iteration: 0  Instance: /DUT2
+# Break in Module DUT2 at serial_to_parallel _tb.v line 34
+do complie1.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# QuestaSim-64 vlog 2020.1 Compiler 2020.01 Jan 28 2020
+# Start time: 20:18:37 on Mar 26,2021
+# vlog -reportprogress 300 serial_to_parallel _tb.v serial_to_parallel.v 
+# -- Compiling module DUT2
+# -- Compiling module serial_to_parallel
+# 
+# Top level modules:
+# 	DUT2
+# End time: 20:18:37 on Mar 26,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 20:18:40 on Mar 26,2021, Elapsed time: 0:00:46
+# Errors: 0, Warnings: 4
+# vsim -voptargs="+acc" work.DUT2 
+# Start time: 20:18:40 on Mar 26,2021
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading work.DUT2(fast)
+# Loading work.serial_to_parallel(fast)
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'u2'.  Expected 5, found 4.
+#    Time: 0 ps  Iteration: 0  Instance: /DUT2/u2 File: serial_to_parallel _tb.v Line: 39
+# ** Warning: (vsim-3722) serial_to_parallel _tb.v(39): [TFMPC] - Missing connection for port 'done'.
+# ** UI-Msg: (vish-4014) No objects found matching '/DUT2/load'.
+# Executing ONERROR command at macro ./complie1.do line 12
+# ** Note: $stop    : serial_to_parallel _tb.v(33)
+#    Time: 390 ns  Iteration: 0  Instance: /DUT2
+# Break in Module DUT2 at serial_to_parallel _tb.v line 33
+# Causality operation skipped due to absence of debug database file
+# End time: 20:41:02 on Mar 26,2021, Elapsed time: 0:22:22
+# Errors: 0, Warnings: 2
