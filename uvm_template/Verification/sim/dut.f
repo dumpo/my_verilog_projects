@@ -1,0 +1,1 @@
+$WORK_AERA/RTL/dut.sv
